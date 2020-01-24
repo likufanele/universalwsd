@@ -1,0 +1,33 @@
+
+Librerias (uso)
+ -nltk (parseo de archivos y texto)
+ -numpy (guardado de datos)
+ -Tensorflow para python3, version 1.5 o superior (sea para version de cpu o gpu)
+ -lxml (parseo de archivos xml)
+ -BeautifulSoup (se instala como bs4, parseo de archivos xml)
+ -gensim (manejo de embeddings)
+ -scipy (algunos metodos)
+ 
+El archivo conf.ini tiene guardados los parametros de la red
+Parametros
+-batchSize (tamaño del batch)
+-epochs (número de epocs)
+-sizeLen (longitud de sequencias)
+-sizeVectors (tamaño de embeddings)
+
+ 
+Para ejecutar el codigo, se hace de forma interactiva, se tiene que abrir una sesión de python version 3. 
+
+
+
+se ejecuta como:
+exec(open('mainMakeArrayTrain.py').read())
+Este comando realiza la creación de la red, y el entrenamiento
+exec(open('generalTest.py').read())
+Este comando realiza la prueba de la red sobre el test de senseval 3
+Finalmente si se requiere volver a entrenar la red, sin cambiar sus parametros, basta con ejecutar esta instrucción
+
+fitModel([zd,zd2,zd3,zd4], finalModel, batchSize, epochs), donde batchSize y epochs, se pueden establecer en cualquier número entero
+para volver a ejecutar exec(open('generalTest.py').read()) y probar de nuevo la red.
+
+
